@@ -1,0 +1,14 @@
+/*mixin対応呼び出し --------*/
+@use "../../foundation/mixin" as m;
+
+// 検索ボタンを基準に作成
+.c-button {
+    display: inline-block;
+    height: 46px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #707070;
+    border-radius: 10px;
+    background-color: #F2EDE9;
+    cursor: pointer;
+}

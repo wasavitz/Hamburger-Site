@@ -1,0 +1,17 @@
+/*レスポンシブ対応呼び出し --------*/
+@use "mixin" as m;
+@use "function" as *;
+
+body {
+    color: #707070;
+    font-weight: bold;
+    line-height: 1.5;
+    font-family: M+PLUS+1p;
+    @include m.mq(tab) {
+    }
+    @include m.mq(pc) {
+        display: grid;
+        grid-template-rows: 217px auto 150px;
+        grid-template-columns: auto respoPC(240, 367);
+    }
+}

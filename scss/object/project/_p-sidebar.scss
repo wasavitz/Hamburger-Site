@@ -1,0 +1,40 @@
+/*   function, mixinの呼び出し -------------------- */
+@use "../../foundation/mixin" as m;
+@use "../../foundation/function" as *;
+
+.p-sidebar {
+    margin-top: 82px;
+    margin-left: 46px;
+    background-color: #F2EDE9;
+    &__title{
+        display: none;
+        @include m.mq(pc){
+            display: block;
+            margin-bottom: 85px;
+            font-size: 34px;
+            
+        }
+    }
+    &__menu{
+        
+
+    }
+}
+.p-sidebar-menu {
+
+    &__list{
+        display: inline-block;
+        margin-bottom: 40px;
+        font-size: 24px;
+    }
+    &__sub-menu{
+        margin-left: 20px;
+        margin-bottom: 49px;
+        &__list{
+            display: inline-block;
+            margin-bottom: 23px;
+            font-weight: normal;
+            font-size: 20px;
+        }
+    }
+}

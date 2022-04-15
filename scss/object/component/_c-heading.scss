@@ -1,0 +1,14 @@
+/*mixin対応呼び出し --------*/
+@use "../../foundation/mixin" as m;
+
+/* font-family: Roboto基準 */
+.c-heading {
+    font-family: Roboto;
+    &__M-normal{
+        font-weight: normal;
+        font-family: M+PLUS+1p;
+    }
+    & &__R-normal {
+        font-weight: normal;
+    }
+}

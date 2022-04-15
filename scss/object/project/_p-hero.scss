@@ -1,0 +1,20 @@
+/*   function, mixinの呼び出し -------------------- */
+@use "../../foundation/mixin" as m;
+@use "../../foundation/function" as *;
+
+.p-hero {
+    position: relative;
+    @include m.mq(pc) {
+        height: 530px;
+        background-image: url(../img/front-page-hero.svg);
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+    &__title {
+        position: absolute;
+        top: 231px;
+        left: 86px;
+        color: #FFFFFF;
+        font-size: 40px;
+    }
+}
