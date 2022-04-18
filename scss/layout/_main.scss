@@ -1,4 +1,5 @@
-@charset "UTF-8";
+/*   mixinの呼び出し -------------------- */
+@use "../foundation/mixin" as m;
 
 .l-main {
     grid-row: 2 / 3 ;

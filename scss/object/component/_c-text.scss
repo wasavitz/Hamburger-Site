@@ -1,0 +1,6 @@
+/*mixin対応呼び出し --------*/
+@use "../../foundation/mixin" as m;
+
+.c-text {
+    font-weight: bold;
+}

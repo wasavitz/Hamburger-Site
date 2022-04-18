@@ -11,7 +11,7 @@
         
     }
     @include m.mq(pc) {
-    margin-right: 31px;
+        margin-right: 31px;
     }
     &:before {
         content: "";
@@ -26,6 +26,7 @@
     }
     &__box {
         width: 230px;
+        padding: 0 0 0 40px;
         @include m.mq(tab) {
             width: respoTB(230, 396);
         }

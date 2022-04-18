@@ -87,17 +87,25 @@
           </li>
         </ul>
       </section>
-    </article>
-    <article class="p-access">
-      <img src="" alt="アクセス" class="p-map-picture">
-      <h2 class="p-access__title">
-        見出しが入ります
-      </h2>
-      <p class="access__text">
-        テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-      </p>
-      <div class="wrap"></div>
-    </article>
+      <section class="p-access">
+        <div class="p-access__wrapper">
+          <picture class="p-access__wrapper__picture">
+            <source srcset="img/access-map--tab.svg" media="(min-width: 1025px)" />
+            <source srcset="img/access-map--pc.svg" media="(min-width: 600px)" />
+            <img src="img/access-map--sp.svg" alt="アクセス" class="p-access-image" /> 
+          </picture>
+          <div class="p-access__wrapper__half-wrapper">
+            <div class="p-access-desc">
+              <h2 class="p-access-desc__heading">
+                見出しが入ります
+              </h2>
+              <p class="p-access-desc__text">
+                テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </article>
   </main>
   <aside class="l-sidebar">
@@ -144,13 +152,16 @@
     </div>
   </aside>
   <footer class="l-footer">
-    <nav class="p-footer__Nav">
-      <ul class="p-Nav__body">
-        <li class="p-Nav__body__items">ショップ情報</li>
-        <li class="p-Nav__body__items">ヒストリー</li>
-      </ul>
-    </nav>
+    <div class="p-footer">
+      <nav class="p-footer__Nav">
+        <ul class="p-footer-nav">
+          <li><a href="" class="p-footer-nav__item">ショップ情報</a></li>
+          <li><span class="p-footer-nav__line"></span></li>
+          <li><a href="" class="p-footer-nav__item">ヒストリー</a></li>
+        </ul>
+      </nav>
+      <p class="p-footer__copyright">Copyright: RaiseTech</p>
+    </div>
   </footer>
 </body>
-
 </html>

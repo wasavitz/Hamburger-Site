@@ -4,7 +4,7 @@
 
 .p-header {
     display: flex;
-    flex-flow: column;
+    flex-flow: column nowrap;
     justify-content: space-evenly;
     height: 217px;
     background-color: #FFF7EF;
@@ -20,7 +20,6 @@
         justify-content: space-between;
         align-items: center;
         position: relative;
-        
     }
     &__title {
         font-size: 40px;
@@ -31,7 +30,6 @@
         @include m.mq(pc) {
             margin-left: respoPC(31, 65);
             font-size: respoPC(48, 64);
-        
         }
     }
     &__menu {
