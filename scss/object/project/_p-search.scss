@@ -8,7 +8,7 @@
     position: relative;
     margin: 0 auto;
     @include m.mq(tab) {
-        
+    
     }
     @include m.mq(pc) {
         margin-right: 31px;
@@ -31,7 +31,7 @@
             width: respoTB(230, 396);
         }
         @include m.mq(pc) {
-            width: respoPC(300, 396);
+            width: respoPC(240, 396);
         }
     }
     &__button {

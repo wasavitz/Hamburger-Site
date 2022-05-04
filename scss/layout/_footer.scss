@@ -2,11 +2,11 @@
 @use "../foundation/mixin" as m;
 
 .l-footer {
-    grid-row: 3 / 4 ;
-    grid-column: 1 / 3 ; 
-    height: 150px;
+    grid-row: 3 / 4;
+    // grid-column: 1 / 2;
     background-image: url(../img/footer-background.svg);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    /* @include m.mq(tab) {}    ※SPと同一 */
+    @include m.mq(pc) {
+        grid-column: 1 / 3;
+    }
 }

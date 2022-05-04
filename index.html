@@ -13,13 +13,17 @@
     rel="stylesheet">
   <link href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="sidebar-function.js"></script>
 </head>
 
-<body>
+<body>  
   <header class="l-header">
     <div class="p-header">
-      <h2 class="c-title p-header__menu">Menu</h2>
-      <h1 class="c-title p-header__title">Hamburger</h1>
+      <h1 class="c-title-Roboto p-header__title">Hamburger</h1>
+      <h2 class="c-title-Roboto p-header__menu">
+        <button type="button" class="menu-button">Menu</button>
+      </h2>
       <form action="" class="p-search">
         <input type="text" class="c-box p-search__box">
         <input type="button" value="検索" onclick="" class="c-button p-search__button">
@@ -34,13 +38,13 @@
         </h2>
       </section>
       <section class="p-brunch">
-        <ul class="p-brunch__menu">
-          <li class="p-brunch-menu--Take">
-            <div class="p-brunch-menu--container">
-              <h2 class="p-brunch-menu__title c-title-Roboto">
+        <ul class="p-brunch__wrapper">
+          <li class="p-brunch-menu c-background">
+            <div class="p-brunch-menu__container">
+              <h2 class="p-brunch-menu__container__title c-title-Roboto">
                 Take Out
               </h2>
-              <div class="p-brunch-menu__descriptions">
+              <div class="p-brunch-menu__container__Descriptions">
                 <dl class="p-brunch-desc">
                   <dt class="p-brunch-desc__heading">
                     Take OUT
@@ -60,12 +64,12 @@
               </div>
             </div>
           </li>
-          <li class="p-brunch-menu--Eat">
-            <div class="p-brunch-menu--container">
-              <h2 class="p-brunch-menu__title c-title-Roboto">
+          <li class="p-brunch-menu c-background">
+            <div class="p-brunch-menu__container">
+              <h2 class="p-brunch-menu__container__title c-title-Roboto">
                 Eat In
               </h2>
-              <div class="p-brunch-menu__descriptions">
+              <div class="p-brunch-menu__container__Descriptions">
                 <dl class="p-brunch-desc">
                   <dt class="p-brunch-desc__heading">
                     Take OUT
@@ -88,29 +92,33 @@
         </ul>
       </section>
       <section class="p-access">
+        <picture class="p-access__picture">
+          <source srcset="img/access-map--tab.svg" media="(min-width: 1025px)" />
+          <source srcset="img/access-map--pc.svg" media="(min-width: 600px)" />
+          <img src="img/access-map--sp.svg" alt="アクセス" class="p-access-image" />
+        </picture>
         <div class="p-access__wrapper">
-          <picture class="p-access__wrapper__picture">
-            <source srcset="img/access-map--tab.svg" media="(min-width: 1025px)" />
-            <source srcset="img/access-map--pc.svg" media="(min-width: 600px)" />
-            <img src="img/access-map--sp.svg" alt="アクセス" class="p-access-image" /> 
-          </picture>
-          <div class="p-access__wrapper__half-wrapper">
-            <div class="p-access-desc">
-              <h2 class="p-access-desc__heading">
-                見出しが入ります
-              </h2>
-              <p class="p-access-desc__text">
-                テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-              </p>
-            </div>
-          </div>
+        </div>
+        <div class="p-access__desc">
+          <h2 class="p-access__desc__heading">
+            見出しが入ります
+          </h2>
+          <p class="p-access__desc__text">
+            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+          </p>
         </div>
       </section>
     </article>
   </main>
-  <aside class="l-sidebar">
+  <aside class="l-sidebar c-transition">
     <div class="p-sidebar">
-      <h2 class="p-sidebar__title c-title">Menu</h2>
+      <p class="p-sidebar__button c-transition">
+        <button class="p-sidebar-button">
+          <span class="p-sidebar-button__line c-transition"></span>
+          <span class="p-sidebar-button__line c-transition"></span>
+        </button>
+      </p>
+      <h2 class="p-sidebar__title">Menu</h2>
       <ul class="p-sidebar__menu">
         <li class="p-sidebar-menu">
           <a href="" class="p-sidebar-menu__list">バーガー</a>
@@ -151,7 +159,7 @@
       </ul>
     </div>
   </aside>
-  <footer class="l-footer">
+  <footer class="l-footer c-background">
     <div class="p-footer">
       <nav class="p-footer__Nav">
         <ul class="p-footer-nav">
@@ -163,5 +171,6 @@
       <p class="p-footer__copyright">Copyright: RaiseTech</p>
     </div>
   </footer>
+  <div class="c-wrapper"></div>
 </body>
 </html>

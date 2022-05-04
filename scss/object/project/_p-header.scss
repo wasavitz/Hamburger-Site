@@ -1,4 +1,4 @@
-/*mixin対応呼び出し --------*/
+/*  function, mixinの呼び出し -------------------- */
 @use "../../foundation/mixin" as m;
 @use "../../foundation/function" as *;
 
@@ -8,10 +8,6 @@
     justify-content: space-evenly;
     height: 217px;
     background-color: #FFF7EF;
-    /*spのみプロパティ --------*/
-    @include m.mq(sp) {
-
-    }
     @include m.mq(tab) {
     
     }
@@ -40,7 +36,7 @@
         @include m.mq(tab) {
             top: 18px;
             right: 26px;
-            font-size: 34px;
+            font-size: respoTB(20,34);
         }
         @include m.mq(pc) {
             display: none;

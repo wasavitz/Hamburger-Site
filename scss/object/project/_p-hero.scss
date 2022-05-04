@@ -23,10 +23,11 @@
         color: #FFFFFF;
         font-size: 36px;
         @include m.mq(tab) {
-            left: 86px;
+            left: respoTab(50,86);
         }
         @include m.mq(pc) {
             top: 231px;
+            left: respoPC(50,86);
             font-size: 40px;
         }
     }

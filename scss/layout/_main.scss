@@ -2,6 +2,10 @@
 @use "../foundation/mixin" as m;
 
 .l-main {
-    grid-row: 2 / 3 ;
-    grid-column: 1 / 2 ; 
+    grid-row: 2 / 3;
+    // grid-column: 1 / 2;
+    /* @include m.mq(tab) {}    ※SPと同一 */
+    @include m.mq(pc) {
+        grid-column: 1 / 2;
+    }
 }

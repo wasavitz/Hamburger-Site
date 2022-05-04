@@ -3,15 +3,17 @@
 @use "function" as *;
 
 body {
+    display: grid;
+    grid-template-rows: 217px auto 150px;
+    grid-template-columns: auto auto;
     color: #707070;
     font-weight: bold;
     line-height: 1.5;
     font-family: M+PLUS+1p;
-    @include m.mq(tab) {
-    }
     @include m.mq(pc) {
-        display: grid;
-        grid-template-rows: 217px auto 150px;
-        grid-template-columns: auto respoPC(240, 367);
+        grid-template-columns: auto respoPC(270, 367);
     }
+}
+.stop {
+    overflow: hidden;
 }

@@ -26,7 +26,9 @@
  @use "object/component/c-title";
  @use "object/component/c-heading";
  @use "object/component/c-text";
- @use "object/component/c-flex-flow";
+ @use "object/component/c-background";
+ @use "object/component/c-wrapper";
+ @use "object/component/c-transition";
 //  @use "object/component/_";
  
 /*   Project -------------------- */
@@ -42,4 +44,4 @@
 //  /*   Utility -------------------- */
 //  @use "object/utility/_";
 //  @use "object/utility/_";
-//  @use "object/utility/_";
+//  @use "object/utility/_"
