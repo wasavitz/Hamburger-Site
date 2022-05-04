@@ -1,7 +1,4 @@
-/*   function, mixinの呼び出し -------------------- */
-@use "../../foundation/mixin" as m;
-
-// 検索ボックスを基準に作成
+/* 検索ボックスを基準に作成 */
 .c-box {
     display: inline-block;
     height: 46px;

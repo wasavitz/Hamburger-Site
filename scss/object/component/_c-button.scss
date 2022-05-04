@@ -1,7 +1,4 @@
-/*mixin対応呼び出し --------*/
-@use "../../foundation/mixin" as m;
-
-// 検索ボタンを基準に作成
+/* 検索ボタンを基準に作成 */
 .c-button {
     display: inline-block;
     height: 46px;

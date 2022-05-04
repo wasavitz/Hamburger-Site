@@ -414,7 +414,6 @@ body {
   font-weight: bold;
   line-height: 1.5;
   font-family: MPLUS1p;
-  overflow-y: scroll;
 }
 @media screen and (min-width: 1025px) {
   body {
@@ -468,7 +467,7 @@ body {
   z-index: 200;
   height: 100%;
   background-color: #f2ede9;
-  overflow-y: scroll;
+  overflow-x: hidden;
 }
 @media screen and (min-width: 1025px) {
   .l-sidebar {
@@ -488,7 +487,7 @@ body {
   overflow: hidden;
 }
 
-/*mixin対応呼び出し --------*/
+/* 検索ボタンを基準に作成 */
 .c-button {
   display: inline-block;
   height: 46px;
@@ -500,7 +499,7 @@ body {
   cursor: pointer;
 }
 
-/*   function, mixinの呼び出し -------------------- */
+/* 検索ボックスを基準に作成 */
 .c-box {
   display: inline-block;
   height: 46px;
@@ -511,12 +510,11 @@ body {
   background-color: #FFFFFF;
 }
 
-/*mixin対応呼び出し --------*/
 /* font-family: Roboto基準 */
 .c-title-Roboto {
   font-family: Roboto;
 }
-/*mixin対応呼び出し --------*/
+
 /* font-family: Roboto基準 */
 .c-heading {
   font-family: Roboto;
@@ -533,12 +531,14 @@ body {
   font-weight: normal;
 }
 
+/* 背景画像挿入時の基本共通プロパティ */
 .c-background {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+/* 『Menu』クリック時の全体カバー */
 .c-wrapper {
   width: 100%;
   height: 100%;
@@ -550,6 +550,7 @@ body {
   left: 0;
 }
 
+/* 『Menu』クリック時のアニメーション */
 .c-transition {
   transition: 0.5s;
 }
@@ -676,14 +677,23 @@ body {
   }
 }
 .p-sidebar__button {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: -100%;
+  width: 250px;
+  /* スマホ・タブレットのみ */
+}
+@media screen and (min-width: 1025px) {
+  .p-sidebar__button {
+    position: inherit;
+    top: inherit;
+    right: inherit;
+    width: inherit;
+  }
 }
 .p-sidebar__button--open {
-  position: fixed;
-  top: 0px;
-  right: 15px;
+  right: 20px;
+  /* スクロールバーとの被り防止 */
   z-index: 20;
   height: 57px;
   background-color: #f2ede9;
@@ -918,7 +928,7 @@ body {
 }
 @media screen and (min-width: 1025px) {
   .p-brunch-desc {
-    padding: 17px 25px 0 19px;
+    padding: 17px 25px 17px 19px;
   }
 }
 .p-brunch-desc__heading {

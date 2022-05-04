@@ -28,14 +28,16 @@ $(function () {
 			$("body").removeClass("stop");
 		}
 	});
-	let w1 = $("aside").outerWidth(true);
-	console.log(w1);
-	$(".p-sidebar__button").width(w1-15);
-
-	let w2 = $(".p-sidebar").outerWidth(true);
-	console.log(w2);
-	let w3 = $("body").outerWidth(true);
-	console.log(w3);
-	let w4 = $("aside").outerWidth(true);
-	console.log(w4);
+	/* 読み込み時の画面サイズによって幅が変わるため今回は不使用 */
+	// let w1 = $("aside").outerWidth(true);
+	// console.log(w1);
+	// let w2 = (w1-15);
+	// $(".p-sidebar__button").width(w2);
+	// console.log(w2);
+	// let w3 = $(".p-sidebar").outerWidth(true);
+	// console.log(w3);
+	// let w4 = $("body").outerWidth(true);
+	// console.log(w4);
+	// let w5 = $("aside").outerWidth(true);
+	// console.log(w5);
 })

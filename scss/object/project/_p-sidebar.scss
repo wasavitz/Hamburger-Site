@@ -19,13 +19,19 @@
         }
     }
     &__button {
-        position: absolute;
+        position: fixed;
         top: 0;
         right: -100%;
+        width: 250px;
+        @include m.mq(pc) {
+            position: inherit;
+            top: inherit;
+            right: inherit;
+            width: inherit;
+        }
+        /* スマホ・タブレットのみ */
         &--open {
-            position: fixed;
-            top: 0px;
-            right: 15px;
+            right: 20px;  /* スクロールバーとの被り防止 */
             z-index: 20;
             height: 57px;
             background-color: #f2ede9;
