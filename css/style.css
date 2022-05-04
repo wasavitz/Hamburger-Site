@@ -414,6 +414,7 @@ body {
   font-weight: bold;
   line-height: 1.5;
   font-family: MPLUS1p;
+  overflow-y: scroll;
 }
 @media screen and (min-width: 1025px) {
   body {
@@ -461,7 +462,7 @@ body {
 /*   mixinの呼び出し -------------------- */
 .l-sidebar {
   grid-row: 1/4;
-  overflow: scroll;
+  overflow-y: scroll;
   position: fixed;
   top: 0;
   right: -100%;
@@ -477,7 +478,6 @@ body {
     display: block;
     grid-row: 1/3;
     grid-column: 2/3;
-    background-color: #f2ede9;
   }
 }
 .l-sidebar--open {
@@ -803,7 +803,7 @@ body {
 
 .p-brunch-menu {
   display: flex;
-  /* 子要素（container）の高さを親要素に合わせるため */
+  /* 親要素に子要素（container）の高さを合わせるため */
   min-height: 642px;
   background-image: url(../img/font-page-Take.svg);
 }
@@ -943,7 +943,6 @@ body {
 /*   function, mixinの呼び出し -------------------- */
 .p-access {
   display: grid;
-  position: relative;
   background-color: #000000;
 }
 .p-access__picture {

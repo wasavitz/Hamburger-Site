@@ -32,7 +32,7 @@
 }
 
 .p-brunch-menu {
-    display: flex;    /* 子要素（container）の高さを親要素に合わせるため */
+    display: flex;    /* 親要素に子要素（container）の高さを合わせるため */
     min-height: 642px;
     background-image: url(../img/font-page-Take.svg);
     &:nth-child(2) {
