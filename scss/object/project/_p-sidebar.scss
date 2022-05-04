@@ -25,7 +25,7 @@
         &--open {
             position: fixed;
             top: 0px;
-            right: 0px;
+            right: 15px;
             z-index: 20;
             height: 57px;
             background-color: #f2ede9;
@@ -71,21 +71,3 @@
         }
     }
 }
-
-// #menu-btn-check:checked ~ .menu-btn::before {
-//     background-color: #707070;
-//     // bottom: 0;
-//     // transform: rotate(45deg);
-// }
-// #menu-btn-check:checked ~ .menu-btn::after {
-//     background-color: #707070;
-//     // top: 0;
-//     // transform: rotate(-45deg);
-// }
-// #menu-btn-check {
-//     display: none;
-// }
-
-// #menu-btn-check:checked ~ .l-sidebar {
-//     left: 0;/*メニューを画面内へ*/
-// }

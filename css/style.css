@@ -406,6 +406,10 @@ th {
 /*   PC画面1920px➡︎1025px-------------------- */
 /*   モバイル画面1024px➡︎600px-------------------- */
 /*レスポンシブ対応呼び出し --------*/
+html {
+  overflow-y: scroll;
+}
+
 body {
   display: grid;
   grid-template-rows: 217px auto 150px;
@@ -414,7 +418,6 @@ body {
   font-weight: bold;
   line-height: 1.5;
   font-family: MPLUS1p;
-  overflow-y: scroll;
 }
 @media screen and (min-width: 1025px) {
   body {
@@ -462,7 +465,6 @@ body {
 /*   mixinの呼び出し -------------------- */
 .l-sidebar {
   grid-row: 1/4;
-  overflow-y: scroll;
   position: fixed;
   top: 0;
   right: -100%;
@@ -683,7 +685,7 @@ body {
 .p-sidebar__button--open {
   position: fixed;
   top: 0px;
-  right: 0px;
+  right: 15px;
   z-index: 20;
   height: 57px;
   background-color: #f2ede9;

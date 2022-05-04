@@ -20,8 +20,8 @@ $(function () {
 		let bp = 1025;
 
 		if ($window > bp) {
-			$(".p-sidebar__button").removeClass("p-sidebar__button--open");
-			$(".p-sidebar-button__line").removeClass("p-sidebar-button--open");
+			$(".p-sidebar__button").removeClass("p-sidebar__button--open")
+			$(".p-sidebar-button").removeClass("p-sidebar-button--open");
 			$(".p-sidebar-button__line").removeClass("p-sidebar-button__line--open");
 			$(".c-wrapper").fadeOut();
 			$(".l-sidebar").removeClass("l-sidebar--open");
@@ -30,7 +30,7 @@ $(function () {
 	});
 	let w1 = $("aside").outerWidth(true);
 	console.log(w1);
-	$(".p-sidebar__button").width(w1);
+	$(".p-sidebar__button").width(w1-15);
 
 	let w2 = $(".p-sidebar").outerWidth(true);
 	console.log(w2);
