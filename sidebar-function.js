@@ -1,7 +1,7 @@
 $(function () {
 	$(".menu-button").click(function () {
 		$(".p-sidebar__button").addClass("p-sidebar__button--open")
-		$(".p-sidebar-button").addClass("p-sidebar-button--open")
+		// $(".p-sidebar-button").addClass("p-sidebar-button--open")
 		$(".p-sidebar-button__line").addClass("p-sidebar-button__line--open");
 		$(".c-wrapper").fadeIn();
 		$(".l-sidebar").addClass("l-sidebar--open");
@@ -9,7 +9,7 @@ $(function () {
 	});
 	$(".p-sidebar__button").click(function () {
 		$(".p-sidebar__button").removeClass("p-sidebar__button--open")
-		$(".p-sidebar-button").removeClass("p-sidebar-button--open");
+		// $(".p-sidebar-button").removeClass("p-sidebar-button--open");
 		$(".p-sidebar-button__line").removeClass("p-sidebar-button__line--open");
 		$(".c-wrapper").fadeOut();
 		$(".l-sidebar").removeClass("l-sidebar--open");

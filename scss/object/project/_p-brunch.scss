@@ -10,16 +10,12 @@
     @include m.mq(pc) {
     }
     &__wrapper {
-        display: flex;
-        flex-flow: column nowrap;
         justify-content: space-between;
         gap: 20px;
         width: 100%;
         margin: 20px 20px 49px 20px;
         @include m.mq(tab) {
-            display: flex;
             flex-flow: inherit;
-            justify-content: space-between;
             gap: respoPC(20, 40);
             margin: 40px;
         }
@@ -46,22 +42,14 @@
         min-height: 1190px;
     }
     &__container {
-        display: flex;
-        flex-flow: column nowrap;
         justify-content: space-between;
         margin: 20px;
         width: 100%;
         @include m.mq(tab) {
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: space-between;
             width: 100%;
             margin: 20px;
         }
         @include m.mq(pc) {
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: space-between;
             width: 100%;
             margin: 20px;
         }

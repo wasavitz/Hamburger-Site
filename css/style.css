@@ -448,6 +448,7 @@ body {
 }
 
 /*   mixinの呼び出し -------------------- */
+/* front-page */
 .l-main {
   grid-row: 2/3;
   /* @include m.mq(tab) {}    ※SPと同一 */
@@ -458,6 +459,7 @@ body {
   }
 }
 
+/* archive */
 /*   mixinの呼び出し -------------------- */
 .l-sidebar {
   grid-row: 1/4;
@@ -481,10 +483,6 @@ body {
 }
 .l-sidebar--open {
   right: 0;
-}
-.l-sidebar--stop {
-  /* bodyタグに追加クラス */
-  overflow: hidden;
 }
 
 /* 検索ボタンを基準に作成 */
@@ -555,6 +553,54 @@ body {
   transition: 0.5s;
 }
 
+.c-flex-flow {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.c-container {
+  padding: 0 100px;
+}
+
+.c-page-nation {
+  margin: 150px 0 64px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.c-page-nation__text {
+  font-size: 16px;
+  line-height: 2.0625;
+}
+.c-page-nation__body {
+  margin-left: 19px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.c-page-nation__body li:nth-child(1) a {
+  background-color: #3C2B1C;
+  color: #FFFFFF;
+}
+.c-page-nation__body::before, .c-page-nation__body::after {
+  content: " ";
+  width: 17px;
+  height: 17px;
+  background-image: url(../img/page-nation.svg);
+}
+.c-page-nation__body::after {
+  transform: rotate(180deg);
+}
+.c-page-nation__body__number {
+  display: inline-block;
+  padding: 7px 13px;
+  border: solid 1px #707070;
+  background-color: #FFFFFF;
+  font-size: 16px;
+  color: #707070;
+  font-family: Roboto;
+}
+
 /*   function, mixinの呼び出し -------------------- */
 .p-search {
   display: inline-block;
@@ -611,8 +657,6 @@ body {
 
 /*  function, mixinの呼び出し -------------------- */
 .p-header {
-  display: flex;
-  flex-flow: column nowrap;
   justify-content: space-evenly;
   height: 217px;
   background-color: #FFF7EF;
@@ -658,7 +702,6 @@ body {
 .p-sidebar {
   padding-top: 82px;
   padding-left: 46px;
-  position: relative;
 }
 @media screen and (min-width: 1025px) {
   .p-sidebar {
@@ -680,6 +723,7 @@ body {
   position: fixed;
   top: 0;
   right: -100%;
+  z-index: 300;
   width: 250px;
   /* スマホ・タブレットのみ */
 }
@@ -741,12 +785,11 @@ body {
 /*   function, mixinの呼び出し -------------------- */
 /*   function, mixinの呼び出し -------------------- */
 .p-hero {
+  /* front-page */
   position: relative;
   height: 285px;
   background-image: url(../img/front-page-hero--sp.svg);
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  /* archive */
 }
 @media screen and (min-width: 600px) {
   .p-hero {
@@ -787,8 +830,6 @@ body {
   /* ブロック要素をセンター合わせ */
 }
 .p-brunch__wrapper {
-  display: flex;
-  flex-flow: column nowrap;
   justify-content: space-between;
   gap: 20px;
   width: 100%;
@@ -796,9 +837,7 @@ body {
 }
 @media screen and (min-width: 600px) {
   .p-brunch__wrapper {
-    display: flex;
     flex-flow: inherit;
-    justify-content: space-between;
     gap: calc(20px + 20 * ( 100vw - 1025px ) / 895 );
     margin: 40px;
   }
@@ -832,26 +871,18 @@ body {
   }
 }
 .p-brunch-menu__container {
-  display: flex;
-  flex-flow: column nowrap;
   justify-content: space-between;
   margin: 20px;
   width: 100%;
 }
 @media screen and (min-width: 600px) {
   .p-brunch-menu__container {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
     width: 100%;
     margin: 20px;
   }
 }
 @media screen and (min-width: 1025px) {
   .p-brunch-menu__container {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
     width: 100%;
     margin: 20px;
   }
@@ -1040,8 +1071,6 @@ body {
 
 /*   function, mixinの呼び出し -------------------- */
 .p-footer {
-  display: flex;
-  flex-flow: column nowrap;
   justify-content: space-between;
   padding-top: 39px;
 }
@@ -1070,6 +1099,93 @@ body {
   height: 30px;
   margin: 0 10px 0 10px;
   background-color: #FFFFFF;
+}
+
+/*   function, mixinの呼び出し -------------------- */
+.p-archive {
+  display: grid;
+  grid-template-rows: 239px auto;
+  grid-template-columns: auto;
+}
+.p-archive__hero {
+  display: flex;
+  align-items: center;
+  background-image: url(../img/archive-hero-pc.svg);
+  background-color: #000000;
+  opacity: 0.5;
+  color: #ffffff;
+  /* スタイル継承のため親で指定 */
+}
+.p-archive__hero__title {
+  margin-left: 86px;
+  font-size: 60px;
+  line-height: 1.3166666667;
+}
+.p-archive__hero__sub-title {
+  margin-left: 20px;
+  font-size: 16px;
+  line-height: 1.4375;
+}
+.p-archive__description {
+  padding: 60px 0 70px 0;
+  color: #3C2A10;
+}
+.p-archive__description__heading {
+  margin-bottom: 25px;
+  font-size: 36px;
+}
+.p-archive__description__text {
+  font-size: 16px;
+  line-height: 1.4375;
+}
+.p-archive__cards {
+  gap: 20px;
+}
+
+/*   function, mixinの呼び出し -------------------- */
+.p-card {
+  display: flex;
+}
+.p-card__picture {
+  width: 50%;
+  background-image: url(../img/cheese-burger-PC.svg);
+}
+.p-card__description {
+  padding: 47px 0 60px 0;
+  width: 50%;
+  background-color: #3C2B1C;
+}
+
+.p-card-desc {
+  padding: 0 104px 60px 63px;
+  color: #ffffff;
+}
+.p-card-desc__title {
+  margin-top: 47px;
+  font-size: 36px;
+}
+.p-card-desc__block__heading {
+  font-size: 24px;
+  margin-bottom: 17px;
+}
+.p-card-desc__block__text {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.4375;
+}
+
+.p-card-button {
+  text-align: center;
+}
+.p-card-button__link {
+  display: inline-block;
+  padding: 27px 106px;
+  border-radius: 38px;
+  background-color: #ffffff;
+  color: #707070;
+  font-size: 16px;
+  line-height: 2.0625;
+  cursor: pointer;
 }
 
 /**

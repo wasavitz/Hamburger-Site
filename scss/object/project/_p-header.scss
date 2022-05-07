@@ -3,8 +3,6 @@
 @use "../../foundation/function" as *;
 
 .p-header {
-    display: flex;
-    flex-flow: column nowrap;
     justify-content: space-evenly;
     height: 217px;
     background-color: #FFF7EF;

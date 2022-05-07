@@ -1,0 +1,51 @@
+@use "../../foundation/mixin" as m;
+
+.c-page-nation {
+
+
+}
+
+.c-page-nation {
+    display: none;
+    @include m.mq(tb) {
+        margin: 150px 0 64px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    @include m.mq(pc) {
+        margin: 106px 0 30px 0;
+    }
+    &__text {
+        font-size: 16px;
+        line-height: calc(33 / 16);
+    }
+    &__body {
+        margin-left: 19px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        li:nth-child(1) a {
+            background-color: #3c2b1c;
+            color: #ffffff;
+        }
+        &::before,&::after {
+            content: " ";
+            width: 17px;
+            height: 17px;
+            background-image: url(../img/page-nation.svg);
+        }
+        &::after {
+            transform: rotate(180deg);
+        }
+        &__number {
+            display: inline-block;
+            padding: 7px 13px;
+            border: solid 1px #707070;
+            background-color: #ffffff;
+            font-size: 16px;
+            color: #707070;
+            font-family: Roboto;
+        }
+    }
+}

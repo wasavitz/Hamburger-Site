@@ -3,18 +3,20 @@
 @use "../../foundation/function" as *;
 
 .p-hero {
+    /* front-page */
     position: relative;
     height: 285px;
     background-image: url(../img/front-page-hero--sp.svg);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
     @include m.mq(tab) {
         background-image: url(../img/front-page-hero--tab.svg);
     }
     @include m.mq(pc) {
         height: 530px;
         background-image: url(../img/front-page-hero--pc.svg);
+    }
+    /* archive */
+    &--archive {
+
     }
     &__title {
         position: absolute;
@@ -31,4 +33,8 @@
             font-size: 40px;
         }
     }
+}
+
+.p-hero-common {
+
 }

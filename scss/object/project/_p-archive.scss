@@ -1,0 +1,42 @@
+/*   function, mixinの呼び出し -------------------- */
+@use "../../foundation/mixin" as m;
+@use "../../foundation/function" as *;
+
+.p-archive {
+    display: grid;
+    grid-template-rows: 239px auto;
+    grid-template-columns: auto; 
+    &__hero {
+        display: flex;
+        align-items: center;
+        background-image: url(../img/archive-hero-pc.svg);
+        background-color: #000000;
+        opacity: 0.5;
+        color: #ffffff;  /* スタイル継承のため親で指定 */
+        &__title {
+            margin-left: 86px;
+            font-size: 60px;
+            line-height: calc(79/60);
+        }
+        &__sub-title{
+            margin-left: 20px;
+            font-size: 16px;
+            line-height: calc(23/16);
+        }
+    }
+    &__description {
+        padding: 60px 0 70px 0;
+        color: #3C2A10;
+        &__heading {
+            margin-bottom: 25px;
+            font-size: 36px;
+        }
+        &__text {
+            font-size: 16px;
+            line-height: calc(23/16);
+        }
+    }
+    &__cards {
+        gap: 20px;
+    }
+}

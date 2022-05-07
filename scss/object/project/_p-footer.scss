@@ -3,8 +3,6 @@
 @use "../../foundation/function" as *;
 
 .p-footer {
-    display: flex;
-    flex-flow: column nowrap;
     justify-content: space-between;
     padding-top: 39px;
     &__Nav { 
