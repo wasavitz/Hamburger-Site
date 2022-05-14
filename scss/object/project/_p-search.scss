@@ -36,6 +36,7 @@
     }
     &__button {
         width: 78px;
+        height: 46px;
         margin-left: 13px;
         text-align: center;
         @include m.mq(tab) {

@@ -56,9 +56,12 @@
         &__title {
             position: relative;
             margin-bottom: 100px; /* テキストボックスとの最低離隔 */
-            color: #eaeaea;
+            color: #EAEAEA;
             font-size: 41px;
             line-height: calc(54 / 41);
+            &:nth-child(2) {
+                color: #FFFFFF;
+            }
             @include m.mq(tab) {
                 font-size: respoPC(44, 60);
                 line-height: calc(58 / 44); /* 必要？ */
